@@ -1,0 +1,271 @@
+.product-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.product-detail-modal {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.btn-close-detail {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.btn-close-detail:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+}
+
+.detail-container {
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+}
+
+.detail-image {
+  flex: 0 0 400px;
+}
+
+.detail-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detail-info h1 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-stars {
+  color: #ffc107;
+  font-size: 16px;
+}
+
+.detail-reviews {
+  color: #666;
+  font-size: 14px;
+}
+
+.detail-description {
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0;
+}
+
+.detail-price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.detail-availability {
+  margin: 10px 0;
+}
+
+.in-stock {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.out-of-stock-text {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.detail-option {
+  margin-bottom: 10px;
+}
+
+.detail-option label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.detail-option select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.detail-option select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.size-btn {
+  padding: 10px 16px;
+  border: 2px solid #ddd;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.size-btn:hover {
+  border-color: #007bff;
+}
+
+.size-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.quantity-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: fit-content;
+}
+
+.quantity-input button {
+  background-color: #f0f0f0;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.quantity-input button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.quantity-input input {
+  width: 50px;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.quantity-input input:focus {
+  outline: none;
+}
+
+.btn-detail-add-to-cart {
+  padding: 14px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-detail-add-to-cart:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-detail-close {
+  padding: 12px 20px;
+  background-color: #e9ecef;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-detail-close:hover {
+  background-color: #dee2e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .detail-container {
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .detail-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .btn-close-detail {
+    top: 10px;
+    right: 10px;
+  }
+
+  .detail-info h1 {
+    font-size: 22px;
+  }
+
+  .detail-price {
+    font-size: 26px;
+  }
+}
