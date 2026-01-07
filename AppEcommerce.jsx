@@ -56,7 +56,6 @@ const AppEcommerce = () => {
       {/* Footer */}
       <footer className="ecommerce-footer">
         <div className="footer-content">
-          <div>ffff</div>
           <div className="footer-section">
             <h4>About Us</h4>
             <p>Your favorite online clothing store with premium quality products.</p>
